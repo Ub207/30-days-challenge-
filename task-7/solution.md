@@ -1,9 +1,37 @@
-# Task 7 Solution: SPECKit Plus Concepts
+# Task 7 Solution: SPECKit Plus Concepts & Installation
 
 ## 1. What is SPECKit Plus?
 SPECKit Plus is a comprehensive framework designed to implement the **SDD-RI (Specification-Driven Development with Recursive Intelligence)** methodology. It provides a structured, AI-native approach to software development that emphasizes "Horizontal/Vertical Intelligence" and a "two-output philosophy" (producing both code and verification/documentation). It guides developers through a disciplined lifecycle—from defining global quality standards to executing atomic tasks—ensuring that AI is used as a collaborative partner rather than just an autonomous generator.
 
-## 2. Core Concepts
+## 2. Installation and Setup
+
+### Prerequisites
+*   Python 3.12 or higher.
+
+### Step 1: Install Spec-Kit Plus
+```bash
+pip install specifyplus
+specifyplus --version
+```
+
+### Step 2: Initialize Project
+```bash
+specifyplus init my-project-name
+# Select AI Tool (Claude Code/Gemini CLI) and Terminal (bash/powershell)
+```
+
+### Step 3: Navigate to Project
+```bash
+cd my-project-name
+```
+
+### Step 4: Verify Structure
+Ensure the `.claude/commands`, `.specify`, and `CLAUDE.md` files are created.
+
+### Step 5: Verify Commands
+Run your AI tool (`claude` or `gemini`) and type `/sp.` to see the list of available commands like `/sp.constitution`, `/sp.specify`, etc.
+
+## 3. Core Concepts
 
 ### 1️⃣ /constitution
 The **Constitution** defines the immutable, project-wide quality standards that apply to *all* work within a project. Unlike specifications which are feature-specific, the Constitution sets global rules such as citation styles, coding standards, plagiarism limits, and security protocols. It acts as the first quality gate, ensuring that every subsequent phase (specification, plan, tasks) adheres to these foundational principles.

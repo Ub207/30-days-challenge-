@@ -1,12 +1,62 @@
-# Task 6 Solution
+# Task 6 Solution: GitHub MCP Server Setup
 
-## Introduction
-This document contains the solution for Task 6 of the AI-Driven Development 30-Day Challenge.
+## 1. Configuration Files
 
-## Solution Details
-*   [Pending Implementation]
+### `.env` File
+Create a file named `.env` in your configuration directory (e.g., `C:\Users\Hp\.gemini\.env` or project root).
 
-## Reflection
-*   [Pending Reflection]
+```env
+GITHUB_PERSONAL_ACCESS_TOKEN=ghp_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+```
 
-> **Note:** This is a placeholder. Please update with the actual solution content once requirements are available.
+### `settings.json` Configuration
+Add the following to your `settings.json` (e.g., `C:\Users\Hp\.gemini\settings.json`):
+
+```json
+{
+  "mcpServers": {
+    "github": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-github"
+      ],
+      "env": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "${GITHUB_PERSONAL_ACCESS_TOKEN}"
+      }
+    }
+  }
+}
+```
+
+## 2. Verification Steps
+
+### Step 1: Check MCP Servers
+Run the following command in Gemini:
+```
+/mcp list
+```
+**Expected Output:**
+```
+✅ github (Tools: 90+)
+```
+
+### Step 2: Test GitHub Connection
+Ask Gemini:
+```
+List my GitHub repositories
+```
+**Expected Output:**
+Gemini should list your repositories, for example:
+*   `Ub207/30-days-challenge-`
+*   `Ub207/hakathone-02`
+*   ...
+
+## 3. Submission Evidence
+
+> **Note:** Please verify these steps on your local machine and take the required screenshots for submission.
+
+*   [ ] **.env Screenshot:** (Place screenshot here)
+*   [ ] **settings.json Screenshot:** (Place screenshot here)
+*   [ ] **MCP List Screenshot:** (Place screenshot here)
+*   [ ] **Repo List Screenshot:** (Place screenshot here)

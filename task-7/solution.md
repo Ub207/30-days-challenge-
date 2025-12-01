@@ -1,4 +1,4 @@
-# Task 7 Solution: SPECKit Plus
+# Task 7 Solution: SPECKit Plus Concepts
 
 ## 1. What is SPECKit Plus?
 SPECKit Plus is a comprehensive framework designed to implement the **SDD-RI (Specification-Driven Development with Recursive Intelligence)** methodology. It provides a structured, AI-native approach to software development that emphasizes "Horizontal/Vertical Intelligence" and a "two-output philosophy" (producing both code and verification/documentation). It guides developers through a disciplined lifecycle—from defining global quality standards to executing atomic tasks—ensuring that AI is used as a collaborative partner rather than just an autonomous generator.
